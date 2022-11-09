@@ -1,0 +1,1 @@
+Hi, if you change anything to the project, please state the file and which line(range), and remember to commit to gitHub. (Instruction is in the README page.)
