@@ -18,4 +18,3 @@ After you make changes
 2. git add .
 3. git commit -m "comment here"
 4. git push origin main
-5. test
