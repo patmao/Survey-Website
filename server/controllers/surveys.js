@@ -6,7 +6,7 @@ let mongoose = require('mongoose');
 // create a reference to the model
 let Surveys = require('../models/surveys');
 
-module.exports.displayBusinessContactsList = (req, res, next) => {
+module.exports.displaySurveysList = (req, res, next) => {
     Surveys.find((err, surveysList) => {
         if (err) {
             return console.error(err);

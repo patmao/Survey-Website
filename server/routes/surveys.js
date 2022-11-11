@@ -17,7 +17,7 @@ function requireAuth(req, res, next) {
 }
 
 /* GET Route for the Book List page - READ Operation */
-router.get('/', requireAuth, surveysController.displayBusinessContactsList);
+router.get('/', requireAuth, surveysController.displaySurveysList);
 
 /* GET Route for displaying the Add page - CREATE Operation */
 router.get('/add', requireAuth, surveysController.displayAddPage);

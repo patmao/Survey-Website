@@ -12,7 +12,7 @@
                     </h1>
 
                     <% if(typeof displayName=='string' && displayName) { %>
-                        <a href="/business-contacts-list/add" class="btn btn-primary" role="button">
+                        <a href="/surveys/add" class="btn btn-primary" role="button">
                             <i class="fas fa-plus-circle"></i> Add a Contact</a>
                         <% } %>
                             <br>
@@ -34,37 +34,37 @@
 
                                 <!-- Repeatable Template Row -->
 
-                                <% for(let count=0; count < BusinessContactsList.length; count++) { %>
+                                <% for(let count=0; count < surveysList.length; count++) { %>
                                     <tr class="d-flex">
                                         <% if(typeof displayName=='string' && displayName) { %>
                                             <td class="text-center col-3">
-                                                <%= BusinessContactsList[count].contact_name %>
+                                                <%= surveysList[count].contact_name %>
                                             </td>
                                             <td class="text-center col-3">
-                                                <%= BusinessContactsList[count].contact_number %>
+                                                <%= surveysList[count].contact_number %>
                                             </td>
                                             <td class="text-center col-4">
-                                                <%= BusinessContactsList[count].contact_email %>
+                                                <%= surveysList[count].contact_email %>
                                             </td>
                                             <td class="text-center col-1">
-                                                <a href="/business-contacts-list/edit/<%= BusinessContactsList[count]._id %>"
+                                                <a href="/surveys/edit/<%= surveysList[count]._id %>"
                                                     class="btn btn-primary btn-sm">
                                                     <i class="fas fa-pencil-alt"></i> Edit</a>
                                             </td>
                                             <td class="text-center col-1">
-                                                <a href="/business-contacts-list/delete/<%= BusinessContactsList[count]._id %>"
+                                                <a href="/surveys/delete/<%= surveysList[count]._id %>"
                                                     class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash-alt"></i> Delete</a>
                                             </td>
                                             <% } else { %>
                                                 <td class="text-center col-3">
-                                                    <%= BusinessContactsList[count].contact_name %>
+                                                    <%= surveysList[count].contact_name %>
                                                 </td>
                                                 <td class="text-center col-3">
-                                                    <%= BusinessContactsList[count].contact_number %>
+                                                    <%= surveysList[count].contact_number %>
                                                 </td>
                                                 <td class="text-center col-6">
-                                                    <%= BusinessContactsList[count].contact_email %>
+                                                    <%= surveysList[count].contact_email %>
                                                 </td>
                                                 <% } %>
                                     </tr>
