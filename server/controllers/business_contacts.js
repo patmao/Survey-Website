@@ -4,7 +4,7 @@ let mongoose = require('mongoose');
 
 
 // create a reference to the model
-let BusinessContacts = require('../models/business_contacts');
+let Surveys = require('../models/surveys');
 
 module.exports.displayBusinessContactsList = (req, res, next) => {
     BusinessContacts.find((err, businessContactsList) => {
