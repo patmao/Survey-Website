@@ -7,17 +7,17 @@ let mongoose = require('mongoose');
 let Surveys = require('../models/surveys');
 
 module.exports.displayBusinessContactsList = (req, res, next) => {
-    BusinessContacts.find((err, businessContactsList) => {
+    Surveys.find((err, surveysList) => {
         if (err) {
             return console.error(err);
         }
         else {
 
 
-            res.render('business_contacts/list',
+            res.render('surveys/list',
                 {
-                    title: 'Business Contacts',
-                    BusinessContactsList: businessContactsList,
+                    title: 'Surveys',
+                    surveysList: surveysList,
                     displayName: req.user ? req.user.displayName : ''
                 });
         }
@@ -25,27 +25,27 @@ module.exports.displayBusinessContactsList = (req, res, next) => {
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('business_contacts/add', {
-        title: 'Add Business Contact',
+    res.render('surveys/add', {
+        title: 'Add Surveys',
         displayName: req.user ? req.user.displayName : ''
     })
 }
 
 module.exports.processAddPage = (req, res, next) => {
-    let newContact = BusinessContacts({
+    let newSurvey = Surveys({
         "contact_name": req.body.contact_name,
         "contact_number": req.body.contact_number,
         "contact_email": req.body.contact_email,
     });
 
-    BusinessContacts.create(newContact, (err, Contact) => {
+    Surveys.create(newSurvey, (err, Survey) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
-            // refresh the contact list
-            res.redirect('/business-contacts-list');
+            // refresh the survey list
+            res.redirect('/surveys');
         }
     });
 
@@ -54,15 +54,15 @@ module.exports.processAddPage = (req, res, next) => {
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    BusinessContacts.findById(id, (err, contactToEdit) => {
+    Surveys.findById(id, (err, surveyToEdit) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
             //show the edit view
-            res.render('business_contacts/edit', {
-                title: 'Edit Contact', contact: contactToEdit,
+            res.render('surveys/edit', {
+                title: 'Edit Answer', survey: surveyToEdit,
                 displayName: req.user ? req.user.displayName : ''
             })
         }
@@ -72,21 +72,21 @@ module.exports.displayEditPage = (req, res, next) => {
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
-    let updatedContact = BusinessContacts({
+    let updatedSurveys = Surveys({
         "_id": id,
         "contact_name": req.body.contact_name,
         "contact_number": req.body.contact_number,
         "contact_email": req.body.contact_email,
     });
 
-    BusinessContacts.updateOne({ _id: id }, updatedContact, (err) => {
+    Surveys.updateOne({ _id: id }, updatedSurveys, (err) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
             // refresh the book list
-            res.redirect('/business-contacts-list');
+            res.redirect('/surveys');
         }
     });
 }
@@ -94,14 +94,14 @@ module.exports.processEditPage = (req, res, next) => {
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
-    BusinessContacts.remove({ _id: id }, (err) => {
+    Surveys.remove({ _id: id }, (err) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
             // refresh the book list
-            res.redirect('/business-contacts-list');
+            res.redirect('/surveys');
         }
     });
 }
