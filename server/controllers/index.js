@@ -65,7 +65,7 @@ module.exports.processLoginPage = (req, res, next) => {
                     return next(err);
                 }
 
-                return res.redirect('/business-contacts-list');
+                return res.redirect('/surveys');
             });
         })(req, res, next);
 }
