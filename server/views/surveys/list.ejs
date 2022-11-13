@@ -6,7 +6,7 @@
         <!-- Main Content -->
         <main class="container">
             <div class="row">
-                <div class="offset-md-1 col-md-11">
+                <div class="offset-md-1 col-md-9">
                     <h1>
                         <%= title %>
                     </h1>
@@ -20,15 +20,21 @@
                                 <!-- Header Row-->
                                 <tr class="d-flex">
                                     <% if(typeof displayName=='string' && displayName) { %>
-                                        <th class="text-center col-3">Name</th>
-                                        <th class="text-center col-3">Number</th>
-                                        <th class="text-center col-4">Email Address</th>
+                                        <th class="text-center col-2">Survey Name</th>
+                                        <th class="text-center col-2">Question 1</th>
+                                        <th class="text-center col-2">Question 2</th>
+                                        <th class="text-center col-2">Question 3</th>
+                                        <th class="text-center col-2">Question 4</th>
+                                        <th class="text-center col-2">Question 5</th>
                                         <th class="text-center col-1"></th>
                                         <th class="text-center col-1"></th>
                                         <% } else { %>
-                                            <th class="text-center col-3">Name</th>
-                                            <th class="text-center col-3">Number</th>
-                                            <th class="text-center col-6">Email Address</th>
+                                            <th class="text-center col-2">Survey Name</th>
+                                            <th class="text-center col-2">Question 1</th>
+                                            <th class="text-center col-2">Question 2</th>
+                                            <th class="text-center col-2">Question 3</th>
+                                            <th class="text-center col-2">Question 4</th>
+                                            <th class="text-center col-2">Question 5</th>
                                             <% } %>
                                 </tr>
 
@@ -37,14 +43,23 @@
                                 <% for(let count=0; count < surveysList.length; count++) { %>
                                     <tr class="d-flex">
                                         <% if(typeof displayName=='string' && displayName) { %>
-                                            <td class="text-center col-3">
-                                                <%= surveysList[count].contact_name %>
+                                            <td class="text-center col-2">
+                                                <%= surveysList[count].name %>
                                             </td>
-                                            <td class="text-center col-3">
-                                                <%= surveysList[count].contact_number %>
+                                            <td class="text-center col-2">
+                                                <%= surveysList[count].question1 %>
                                             </td>
-                                            <td class="text-center col-4">
-                                                <%= surveysList[count].contact_email %>
+                                            <td class="text-center col-2">
+                                                <%= surveysList[count].question2 %>
+                                            </td>
+                                            <td class="text-center col-2">
+                                                <%= surveysList[count].question3 %>
+                                            </td>
+                                            <td class="text-center col-2">
+                                                <%= surveysList[count].question4 %>
+                                            </td>
+                                            <td class="text-center col-2">
+                                                <%= surveysList[count].question5 %>
                                             </td>
                                             <td class="text-center col-1">
                                                 <a href="/surveys/edit/<%= surveysList[count]._id %>"
@@ -57,14 +72,23 @@
                                                     <i class="fas fa-trash-alt"></i> Delete</a>
                                             </td>
                                             <% } else { %>
-                                                <td class="text-center col-3">
-                                                    <%= surveysList[count].contact_name %>
+                                                <td class="text-center col-2">
+                                                    <%= surveysList[count].name %>
                                                 </td>
-                                                <td class="text-center col-3">
-                                                    <%= surveysList[count].contact_number %>
+                                                <td class="text-center col-2">
+                                                    <%= surveysList[count].question1 %>
                                                 </td>
-                                                <td class="text-center col-6">
-                                                    <%= surveysList[count].contact_email %>
+                                                <td class="text-center col-2">
+                                                    <%= surveysList[count].question2 %>
+                                                </td>
+                                                <td class="text-center col-2">
+                                                    <%= surveysList[count].question3 %>
+                                                </td>
+                                                <td class="text-center col-2">
+                                                    <%= surveysList[count].question4 %>
+                                                </td>
+                                                <td class="text-center col-2">
+                                                    <%= surveysList[count].question5 %>
                                                 </td>
                                                 <% } %>
                                     </tr>
