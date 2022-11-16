@@ -34,7 +34,10 @@
                                 <% for(let count=0; count < surveysList.length; count++) { %>
                                     <tr class="d-flex">
                                         <% if(typeof displayName=='string' && displayName) { %>
-                                            <td class="text-center col-10">
+                                            <td class="text-center col-5">
+                                                <%= surveysList[count].contact_name %>
+                                            </td>
+                                            <td class="text-center col-5">
                                                 <%= surveysList[count].contact_email %>
                                             </td>
                                             <td class="text-center col-1">
