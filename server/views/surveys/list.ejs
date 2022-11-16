@@ -35,10 +35,10 @@
                                     <tr class="d-flex">
                                         <% if(typeof displayName=='string' && displayName) { %>
                                             <td class="text-center col-5">
-                                                <%= surveysList[count].contact_name %>
+                                                <%= surveysList[count].name %>
                                             </td>
                                             <td class="text-center col-5">
-                                                <%= surveysList[count].contact_email %>
+                                                <%= surveysList[count].question1 %>
                                             </td>
                                             <td class="text-center col-1">
                                                 <a href="/surveys/edit/<%= surveysList[count]._id %>"
