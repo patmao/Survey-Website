@@ -72,6 +72,8 @@ module.exports.processLoginPage = (req, res, next) => {
 
 
 module.exports.performLogout = (req, res, next) => {
-    req.logout();
-    res.redirect('/');
+    req.logout(function(err) {
+        if (err) { return next(err);}
+        res.redirect('/login');
+    });
 }
