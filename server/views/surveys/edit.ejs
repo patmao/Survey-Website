@@ -14,48 +14,46 @@
                         <div class="form-group">
                             <label for="nameTextField">Survey Name</label>
                             <input type="text" class="form-control" id="nameTextField"
-                                placeholder="Enter the Survey Name" name="name"
-                                value="<%= survey.name %>"
-                                required>
+                                placeholder="Enter the Survey Name" name="name" value="<%= survey.name %>" required>
                         </div>
 
                         <div class="form-group">
                             <label for="authorTextField">Question 1</label>
                             <textarea type="text" class="form-control" id="numberTextField"
-                                placeholder="Enter the Question Number 1" name="question1" 
+                                placeholder="Enter the Question Number 1" name="question1"
                                 required><%= survey.question1 %></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="authorTextField">Question 2</label>
                             <textarea type="text" class="form-control" id="numberTextField"
-                                placeholder="Enter the Question Number 2" name="question2" 
+                                placeholder="Enter the Question Number 2" name="question2"
                                 required><%= survey.question2 %></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="authorTextField">Question 3</label>
                             <textarea type="text" class="form-control" id="numberTextField"
-                                placeholder="Enter the Question Number 3" name="question3" 
+                                placeholder="Enter the Question Number 3" name="question3"
                                 required><%= survey.question3 %></textarea>
                         </div>
                         <div class="form-group">
                             <label for="authorTextField">Question 4</label>
                             <textarea type="text" class="form-control" id="numberTextField"
-                                placeholder="Enter the Question Number 4" name="question4" 
+                                placeholder="Enter the Question Number 4" name="question4"
                                 required><%= survey.question4 %></textarea>
                         </div>
                         <div class="form-group">
                             <label for="authorTextField">Question 5</label>
                             <textarea type="text" class="form-control" id="numberTextField"
-                                placeholder="Enter the Question Number 5" name="question5" 
+                                placeholder="Enter the Question Number 5" name="question5"
                                 required><%= survey.question5 %></textarea>
                         </div>
 
-                        <button class="btn btn-primary" type="submit">
+                        <button class="btn btn-primary add-page-btns" type="submit">
                             <i class="fas fa-edit"></i> Submit</button>
 
-                        <a href="/surveys" class="btn btn-warning">
+                        <a href="/surveys" class="btn btn-warning add-page-btns">
                             <i class="fas fa-undo"></i> Cancel</a>
                     </form>
                 </div>
