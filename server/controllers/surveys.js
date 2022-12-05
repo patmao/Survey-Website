@@ -80,6 +80,7 @@ module.exports.processEditPage = (req, res, next) => {
     let updatedSurveys = Surveys({
         "_id": id,
         "name": req.body.name,
+        "email": req.body.email,
         "question1": req.body.question1,
         "question2": req.body.question2,
         "question3": req.body.question3,
