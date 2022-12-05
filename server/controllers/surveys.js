@@ -68,6 +68,7 @@ module.exports.displayEditPage = (req, res, next) => {
             res.render('surveys/edit', {
                 title: 'Edit Answer', survey: surveyToEdit,
                 displayName: req.user ? req.user.displayName : ''
+
             })
         }
     });
