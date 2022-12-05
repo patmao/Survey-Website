@@ -16,10 +16,10 @@ module.exports.displayAboutPage = (req, res, next) => {
     res.render('about', { title: 'About', displayName: req.user ? req.user.displayName : '' });
 }
 
-module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('projects', { title: 'Products', displayName: req.user ? req.user.displayName : '' });
-}
 
+module.exports.displayServicesPage = (req, res, next) => {
+    res.render('services', { title: 'Services', displayName: req.user ? req.user.displayName : '' });
+}
 
 module.exports.displayContactPage = (req, res, next) => {
     res.render('contact', { title: 'Contact', displayName: req.user ? req.user.displayName : '' });
