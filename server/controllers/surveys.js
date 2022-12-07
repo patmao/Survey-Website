@@ -18,7 +18,7 @@ module.exports.displaySurveysList = (req, res, next) => {
                 {
                     title: 'Surveys',
                     surveysList: surveysList,
-                    displayName: req.user ? req.user.displayName : ''
+                    displayName: req.user ? req.user.displayName : ''  
                 });
         }
     }).sort({ 'contact_name': 1 });
