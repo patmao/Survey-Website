@@ -42,3 +42,7 @@ input, label{
 .add-page-btns{ 
     margin-bottom: 100px;
 }
+
+body{
+    background-color: rgb(32, 147, 175);
+}
